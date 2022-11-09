@@ -4,11 +4,15 @@ export default class DeviceStore {
     constructor() {
         this._types = [
             {id:1, name: 'Холодильник'},
-            {id:2, name: 'Смартфоны'}
+            {id:2, name: 'Смартфоны'},
+            {id:3, name: 'Ноутбуки'},
+            {id:4, name: 'Телевизоры'}
         ]
         this._brands = [
             {id:1, name: 'Samsung'},
-            {id:2, name: 'Apple'}
+            {id:2, name: 'Apple'},
+            {id:3, name: 'Lenovo'},
+            {id:4, name: 'Asus'},
         ]
         this._devices = [
             {id:1, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
@@ -17,6 +21,8 @@ export default class DeviceStore {
             {id:1, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
             {id:1, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
         ]
+        this._selectedType = {}
+        this._selectedBrand = {}
         makeAutoObservable(this)
     }
     setTypes(types){
@@ -28,6 +34,12 @@ export default class DeviceStore {
     setDevices(devices) {
         this._devices = devices
     }
+    setSelectedType (type) {
+        this._selectedBrand = type
+    }
+    setSelectedBrand (brand) {
+        this._selectedBrand = brand
+    }
     get types() {
         return this._types
     }
@@ -36,5 +48,11 @@ export default class DeviceStore {
     }
     get devices() {
         return this._devices
+    }
+    get selectedType() {
+        return this._selectedType
+    }
+    get selectedBrand() {
+        return this._selectedBrand
     }
 }
