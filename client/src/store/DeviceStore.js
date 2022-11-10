@@ -16,10 +16,10 @@ export default class DeviceStore {
         ]
         this._devices = [
             {id:1, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
-            {id:1, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
-            {id:1, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
-            {id:1, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
-            {id:1, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
+            {id:2, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
+            {id:3, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
+            {id:4, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
+            {id:5, name: 'Iphone 12 Pro', price: 25000, rating: 5, img: `https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue.png?v=11`},
         ]
         this._selectedType = {}
         this._selectedBrand = {}
