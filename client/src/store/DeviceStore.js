@@ -35,7 +35,7 @@ export default class DeviceStore {
         this._devices = devices
     }
     setSelectedType (type) {
-        this._selectedBrand = type
+        this._selectedType = type
     }
     setSelectedBrand (brand) {
         this._selectedBrand = brand
