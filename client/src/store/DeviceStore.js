@@ -26,10 +26,10 @@ export default class DeviceStore {
         makeAutoObservable(this)
     }
     setTypes(types){
-        this.isAuth = types
+        this._types = types
     }
     setBrands(brands) {
-        this._user = brands
+        this._brands = brands
     }
     setDevices(devices) {
         this._devices = devices
