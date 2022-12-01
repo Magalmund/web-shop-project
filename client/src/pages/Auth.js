@@ -5,14 +5,22 @@ import {NavLink, useLocation, useNavigate} from "react-router-dom";
 import {login, registration} from "../http/userAPI";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
+import RegistrationPage from "./RegistrationPage";
+import Login from "../components/Login/Login";
+import Registration from "../components/Registration";
 
 const Auth = observer(() => {
     const {user} = useContext(Context)
     const location = useLocation()
     const navigate = useNavigate()
     const isLogin = location.pathname === LOGIN_ROUTE
+
+
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+
 
     const click = async () => {
         try {
@@ -39,19 +47,17 @@ const Auth = observer(() => {
             <Card style={{width: 600}} className="p-5">
                 <h2 className="m-auto">{isLogin ? "Авторизация" : "Регистрация"}</h2>
                 <Form className="d-flex flex-column">
-                    <Form.Control
-                        className="mt-3"
-                        placeholder="Введите ваш email"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                    />
-                    <Form.Control
-                        className="mt-3"
-                        placeholder="Введите ваш пароль"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        type="password"
-                    />
+                    {isLogin
+                    ?
+                        <Login
+                            email={email}
+                            setEmail={setEmail}
+                            password={password}
+                            setPassword={setPassword}
+                        />
+                        :
+                        <div>Registration</div>
+                    }
                     <Row className="d-flex justify-content-between mt-3 ps-3 pe-3">
                         {isLogin
                             ?
